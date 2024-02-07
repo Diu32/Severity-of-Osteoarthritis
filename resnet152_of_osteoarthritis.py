@@ -322,7 +322,7 @@ base_model = ResNet152(weights='imagenet', include_top=False, input_shape=input_
 
 # Freeze the layers of the pre-trained ResNet
 for layer in base_model.layers:
-    layer.trainable = False
+    layer.trainable = True
 
 # Build the classification head on top of the ResNet features
 model = models.Sequential([
